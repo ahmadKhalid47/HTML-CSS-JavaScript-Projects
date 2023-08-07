@@ -1,0 +1,336 @@
+<!DOCTYPE>
+<html>
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="food.css" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/8ab48d9270.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", sans-serif;
+}
+body{
+    width:100%;
+}
+.section1 {
+    width:100%;
+    height: 100px;
+    display: flex; 
+    justify-content: center;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0,0.2);
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index:50;
+}
+.nav{
+    width:78%;
+    display:flex; 
+    justify-content:space-between; 
+}  
+.bar, i{ 
+    border:none;
+    text-align:right; 
+    margin-bottom:50px;
+} 
+.bar{   
+    display:grid;
+    justify-content:end;
+    margin-top:50px; 
+    height:100%;  
+    font-size:17px;
+}
+.bar-matirial { 
+    display:none;
+    background-color: wheat;
+    width: 250px;
+    height: 100%;
+    text-align: left;
+}
+#check:checked ~ .bar-matirial{
+    display: grid; 
+}
+.section1 input{
+    display:none;
+}
+h5{
+    margin:20px;
+}
+.section2 {
+    height: 600px; 
+    display: flex; 
+    justify-content: center;
+    align-items:center;
+    margin-bottom:5%;
+} 
+.innerdiv{
+    display:flex; 
+    justify-content:space-between;
+    align-items:center;
+    width:80%;
+    height:100%; 
+}
+.picdiv{
+    height:90%;
+    width:50%; 
+    display:flex;
+    justify-content:center;
+}
+.detaildiv { 
+    height: 60%;
+    width: 45%; 
+    display:grid;
+    align-items:center;
+}
+h1{
+    font-size:68px;
+    font-weight:300;
+}
+h4:first-of-type {
+    background-color: #149f39;
+    width:fit-content;
+    padding:7px;
+    color:white;
+    font-weight:100;
+}
+h4:nth-of-type(2){
+    font-weight:100; 
+}
+h4:nth-of-type(3) {
+    background-color: #ffc066;
+    width: fit-content;
+    padding: 10px 13px; 
+    font-weight: 100;
+    font-size:small;
+}
+
+.section3{ 
+    height:200px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+}
+.portion {
+    width: 370px;
+    height: 100px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icondiv {
+    width: 25%; 
+}
+.paradiv{
+    height:85%;
+    width:73%; 
+    line-height:20px;
+}
+p{
+    font-weight:100;
+}
+.portion:hover{ 
+    box-shadow:2px 2px 2px rgba(0,0,0,0.1);
+}
+
+.section4{
+    height:1100px; 
+    display:grid;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
+}
+.section4 h4,h2{
+    margin:auto;
+}
+.grid{
+    width:1200px;
+    height:900px; 
+    display:flex; 
+    justify-content:center;
+}
+.gridpics1{
+    width:min-content;   
+}
+
+.gridpics2 {
+    width: min-content;  
+}
+
+.gridpics3{
+    width:min-content;  
+}
+.grid img{  
+    margin:4px;
+    border-radius:10px;
+}
+.innergriddiv{
+    display:flex;
+    height:31.4%; 
+} 
+.innergriddiv img{
+    width:50%; 
+}
+.grid img:hover{ 
+    transform:scale(1.04);
+    transition:0.2s ease-in-out;
+}
+
+.section5 {
+    height: 210px;
+    background-color: #fff0db;
+    display: flex;
+    justify-content:space-evenly;
+    align-items:center;
+    line-height:30px;
+}
+.section5 img{
+    margin-bottom:90px;
+}
+.section5 h3{
+    font-weight:bold;
+    color:gray;
+} 
+p{
+    color:gray;
+}
+input{ 
+    padding:5px 40px;
+    margin:8px 0px;
+} 
+.footer-icons{
+    font-size:17px;
+    margin:10px 0px;  
+} 
+i{
+    margin-right:10px;
+    color:black;
+}
+i:active {
+    color:red;
+} 
+@media (max-width:1120px){
+    .section2{   
+        flex-direction:column;
+    }
+}
+    </style>
+</head> 
+<body> 
+    <div class="section1">
+        <div class="nav">
+            <div class="logo">
+                <img src="f0.png" />
+            </div>
+            <div class="bar">
+                <label for="check"><i class="fa-solid fa-bars fa-2xl"></i></label>
+                    <input type="checkbox" id="check" />                    
+                <div class="bar-matirial">
+                    <h5>Home</h5>
+                    <h5>Public</h5>
+                    <h5>Collectives</h5>
+                    <h5>Team</h5>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="section2">
+        <div class="innerdiv">
+            <div class="picdiv">
+                <img src="f1.png"/>
+            </div>
+            <div class="detaildiv">
+                <h4>50% Off on All Products</h4>
+                <h1>Enjoy Your <br />Delicious Food</h1>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, iste corporis tempore necessitatibus inventore ex?</h4>
+                <h4>Explore Now</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="section3">
+        <div class="portion">
+            <div class="icondiv">
+                <img src="f10.png"/>
+            </div>
+            <div class="paradiv">
+                <h3>Discount Voucher</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+
+        <div class="portion">
+            <div class="icondiv">
+                <img src="f9.png" />
+            </div>
+            <div class="paradiv">
+                <h3>Fresh Healthy Food</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>               
+            </div>
+        </div>
+
+        <div class="portion">
+            <div class="icondiv">
+                <img src="f11.png" />
+            </div>
+            <div class="paradiv">
+                <h3>Fast Home Delivery</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section4">
+        <h4 class="greenheading">Our Menu</h4>
+        <h2>Explore Our Menu</h2>
+        <div class="grid">
+            <div class="gridpics1">
+                <img src="f8.png" />
+                <div class="innergriddiv">
+                    <img src="f5.png" />
+                    <img src="f4.png" />
+                </div>
+            </div>
+            <div class="gridpics2">
+                <img src="f7.png" />
+                <img src="f6.png" />
+            </div>
+            <div class="gridpics3">
+                <img src="f3.png" />
+                <img src="f2.png" />
+            </div>
+        </div>
+    </div>
+    <div class="section5">
+        <div class="footer1">
+            <img src="f0.png" />
+        </div>
+        <div class="footer2">
+            <h3>Main Links</h3>
+            <p>Order Tracking<p/>
+            <p>New Order</p>
+            <p>Contact Us</p>
+            <p>News & Blogs</p>   
+        </div>
+        <div class="footer3"> 
+                <h3>Support</h3>
+                <p>Order Tracking</p>
+                <p>New Order</p>
+                <p>Contact Us</p>
+                <p>News & Blogs</p> 
+        </div>
+        <div class="footer4">
+            <h3>Support</h3>
+            <input type="email" placeholder="Enter Your Email..." />
+            <h3>Follow Us</h3>
+            <div class="footer-icons">
+                <i class="fa-brands fa-facebook-f fa-2xl"></i>
+                <i class="fa-brands fa-twitter fa-2xl"></i>
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+                <i class="fa-brands fa-youtube fa-2xl"></i>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
