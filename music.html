@@ -1,0 +1,451 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+    <script src="https://kit.fontawesome.com/8ab48d9270.js" crossorigin="anonymous"></script>
+
+<style>
+* {
+    margin: 0px;
+    padding: 0px; 
+    font-family: "Roboto", sans-serif;
+    color:white;
+} 
+.section1 { 
+    height: 90px;
+    background-color: #270082;
+    display: flex;
+    justify-content: center;
+    position:sticky;
+    top:0px;
+    z-index:50;
+}
+.navigation {
+    width: 78%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+h1 {
+    font-size: 95px;
+    font-weight: 700;
+}
+h2{
+    font-size:33px;
+    font-weight:700;
+}
+h3{
+    font-size:22px;
+}
+.bar { 
+    width: 300px;
+    height: 50px;
+    text-align: right; 
+    display:flex;
+    flex-direction:row-reverse
+} 
+input{ 
+    display:none;
+}
+.option {   
+    width: 300px;
+    height: 50px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:center;
+}
+label{
+    display:none;
+}
+.section1 p:hover{
+    border-color:white;
+}
+.section1 p {
+    padding:1.5px;
+    border-bottom:2px solid transparent;
+    transition:0.3s;
+}
+.section2{ 
+    width:100%;
+    height:100%; 
+    background-image:url(m1.png);
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:30px;
+    align-items:center;
+}
+.section2 h1 {
+    margin-bottom: 20px;
+    text-align:center;
+}
+.section2 h2,.section2 p{
+    margin:0% 10%;
+    text-align:center;
+}
+.section3 { 
+    height: fit-content;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.writting_container {
+    width: 100%; 
+    height: 570px;
+    display: flex;
+    justify-content: center;
+    background-color: #281154;
+}
+.writting {
+    margin-top:40px;
+    width:80%;
+    height:fit-content;
+    text-align: center; 
+    position:relative;  
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+    align-items:center;
+}
+.image_container{
+    height:fit-content;
+    width:100%;
+    display:flex;
+    justify-content:center; 
+    margin-top:-20%;
+}
+.image {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height:fit-content; 
+}
+.image img{
+    width:100%;
+
+}
+.writting p:first-of-type{
+    font-weight:bold;
+}
+span
+{
+    background-color:red;
+    width:fit-content;
+    padding:9px 14px;
+    font-size:12px;
+}
+span:hover{
+    opacity:0.8;
+}
+.section4 { 
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    padding: 8% 9.5%;
+    text-align: center;
+}
+.section4 h4{
+    font-size:20px;
+    font-weight:bold;
+    color: black;
+}
+.section4 p {
+    color: black;
+    font-weight:lighter;
+}
+.section4 span {
+    background-color: #270082;
+}
+
+.section5{ 
+    display:flex;
+    justify-content:center;
+}
+.laptop_image{
+    width:70%;
+    height:fit-content; 
+}
+.laptop_image img{
+    width:100%;
+}
+.section6{
+    height:100%;
+    width:100%;
+    background-image:url(m4.png);
+    background-size:cover;  
+    background-position:center;
+}
+.section6_text{
+    width:80%;
+    height:fit-content; 
+    margin:5% 10%;
+    position:relative;
+    top:32%;
+    display:flex;
+    flex-direction:column;
+    gap:35px;
+    text-align:center;
+}
+.section6_text h4{ 
+    font-size:17px;
+    font-weight: bold;
+}
+.section6_text p{ 
+    font-weight:lighter;
+}
+.section7{
+    height:100%;
+}
+.section7_part1 {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height: fit-content;
+    background-color: white;
+    padding:8% 13%;
+}
+.card_portion{ 
+    height:fit-content; 
+    display:flex;
+    justify-content:space-between;
+}
+.card_image {
+    width: 40%;
+    height: fit-content; 
+    display:flex;  
+}
+    .card_image img {
+        width: 100%;
+        display:flex;
+        align-items: center;
+    }
+.card_detail {
+    width: 55%;
+    height: fit-content; 
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between; 
+    padding:10px 10px;
+    gap:20px;
+}
+.card_detail h4 {
+    font-size: 17px;
+    color: black;
+}
+.card_detail p {
+    color: black;
+}
+.card_detail span{
+    background-color:darkblue;
+}
+
+.section7_part2 {
+    height: fit-content;
+    padding: 0% 10%;
+    background-color: #270082;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section7_part3 {
+    text-align:center;
+    height:fit-content;
+    background-color:#160048;
+    padding:20px;
+}
+.inner_div{
+    width:fit-content; 
+    line-height:20px;
+    margin:20px 0px;
+}
+.inner_div h4{
+    margin-bottom:5px;
+    padding-bottom:5px;
+    font-size:15px;
+    border-bottom:solid;
+} 
+@media (max-width:700px) {
+    .section1{ 
+        height:70px;
+    } 
+    .navigation{
+        width:90%;
+    }
+    .bar{
+        margin-top:40px;
+        flex-direction:column ;
+        align-items:end;
+        gap:32px;
+    }
+    .option {
+        padding: 20px;
+        display: none;
+        background-color: #270082;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+        gap: 20px;
+    }
+    label{  
+        display:block; 
+        margin-top:8px;
+    }
+    #check:checked ~ .option{
+        display:flex;
+    } 
+    .section2 h1{
+        font-size:50px;
+    }
+    .image,.laptop_image{
+        width:80%;
+    }
+    .writting_container{
+        height:500px;
+    }
+    .card_portion {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .card_image{
+        width:80%;
+    }
+    .card_detail{
+        width:100%;
+    }
+    .section7_part2{
+        flex-direction:column;
+        align-items:start;
+        text-align:left;
+    }
+}
+</style>
+</head>
+<body>
+    <div class="section1">
+        <div class="navigation">
+            <h2>myTunes</h2>   
+            <div class="bar">
+                <label for="check"><i class="fa-solid fa-bars fa-2xl"></i></label>
+                <input type="checkbox" id="check" />
+                <div class="option">
+                    <p>Overview</p>
+                    <p>Music</p>
+                    <p>Video</p>
+                    <p>Gift Cards</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section2">
+        <h1>my Tunes</h1>
+        <h2>Your music, movies, and TV shows take center stage.</h2>
+        <p>myTunes is the best way to organize and enjoy the music, movies, and TV shows you already
+           have � and shop for the ones you want. Enjoy all the entertainment myTunes has to offer on your Mac and PC.
+        </p>
+    </div>
+
+    <div class="section3">
+        <div class="writting_container">
+            <div class="writting">
+                <h3><i class="fa-solid fa-music fa-l"></i> Music</h3>
+                <p>Stream over 45 million songs, ad-free. Or download albums and tracks to listen to offline.
+                All the music in your personal myTunes library � no matter where it came from � lives right alongside
+                the Orange Music catalog. Start your free three-month trial with no commitment, and cancel anytime.</p>
+                <span>Start Your Trail Now</span>
+                <p>Orange Music is available in myTunes, and for iOS and Android devices.</p>
+            </div>
+        </div>
+        <div class="image_container">
+            <div class="image">
+                <img src="m2.png" />
+            </div>
+        </div>
+    </div>
+    <div class="section4">
+        <h4>The movie and TV collection you always wished for. Granted.</h4>
+        <p>
+            With over 100,000 movies and TV shows to choose from, there�s always something great to watch on myTunes
+            and if you watch on Orange TV 4K, you�ll be able to enjoy a tremendous selection of your favorite content in
+            4K HDR. So get ready to enjoy episodes of your favorite TV shows or hit movies you�ve been waiting to see � anytime,
+            anywhere. Just tap to play, or even download if you�re going somewhere you won�t have Wi-Fi.
+        </p>
+        <span>Read more</span>
+    </div>
+    <div class="section5 ">
+        <div class="laptop_image">
+            <img src="m3.png"/>
+        </div>
+    </div>
+    <div class="section6">
+        <div class="section6_text">
+            <h4>A world of entertainment. Available wherever you are.</h4>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veniam nobis, nisi ut expedita, doloribus
+                reprehenderit explicabo non velit repellat alias saepe inventore repellendus? Molestias suscipit eos tempora?
+                Quae quaerat cumque in veritatis impedit dolorum sapiente recusandae minima quo aperiam quam, excepturi quasi
+                totam ad quas? Ipsam laudantium soluta delectus!
+            </p>
+        </div>
+    </div>
+    <div class="section7">
+        <div class="section7_part1">
+            <div class="card_portion">
+                <div class="card_image">
+                    <img src="m5.png" />
+                </div>
+                <div class="card_detail">
+                    <h4>Gift Card</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt cum explicabo, excepturi eaque commodi
+                       minima quas repellendus assumenda facere hic, earum quasi iste asperiores molestiae obcaecati laborum, 
+                       voluptatum alias velit cupiditate! Quae soluta sapiente quasi, iusto quam magnam doloribus natus quod eius,
+                       rerum asperiores aspernatur. Illum neque sequi odit fuga.</p>
+                    <p>Already have an Orange MyTunes Music Gift Card?</p><hr />       
+                    <span>Redeem</span>
+                </div>
+            </div>
+        </div>
+        <div class="section7_part2">
+            <div class="inner_div">
+                <h4>Shop & Learn</h4>
+                <p>Music</p>
+                <p>Movies</p>
+                <p>Shows</p>
+                <p>Apps</p>
+                <p>Gift Cards</p>
+            </div> 
+            <div class="inner_div">
+                <h4>Orange Store</h4>
+                <p>Find a Store</p>
+                <p>Today at Orange</p>
+                <p>Financing</p>
+                <p>Orange Camp</p>
+                <p>Order Status</p> 
+            </div> 
+            <div class="inner_div">
+                <h4>Education & Business</h4>
+                <p>Orange & Education</p>
+                <p>Shop for Collage</p>
+                <p>Orange & Business</p>
+                <p>Shop for Business<p>
+                <p>Jobs</p>
+            </div> 
+            <div class="inner_div">
+                <h4>Shop & Learn</h4>
+                <p>Music</p>
+                <p>Movies</p>
+                <p>Shows</p>
+                <p>Apps</p>
+                <p>Gift Cards</p>
+            </div> 
+        </div>
+        <div class="section7_part3">
+            <p>Copyright � 2022 Do Some Coding</p>
+        </div>
+    </div>
+</body>
+</html>
