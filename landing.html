@@ -1,0 +1,170 @@
+<!DOCTYPE>
+<html>
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="landing.css" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+* {
+margin: 0px;
+padding: 0px;
+font-family: "Roboto", sans-serif;
+}
+.section1{
+    color:white;
+    width:100%;
+    height:100%;
+    background-image:url(l1.png); 
+    background-repeat:round;
+    display:grid;
+    justify-content:center;
+}
+.section2 {
+    height: 200px;
+    display: flex;
+    color: white;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+.section3 {
+    height: 490px;
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+} 
+h1 {
+    font-size: 72px; 
+    font-weight:300;
+}
+span{
+    font-size:96px;
+    font-weight:400;
+}
+.course {
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    width: 330px;
+    height: 400px;
+    overflow: hidden;
+}
+.course:hover {
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+.image_div{ 
+    height:50%;
+    background-repeat:round;
+}
+.c1 .image_div{
+    background-image:url(l3.png);
+}
+.c2 .image_div{
+    background-image:url(l2.png);
+}
+.c3 .image_div{
+    background-image:url(l3.png);
+}
+.detail_div{  
+    width:100%;
+    height:50%;
+}
+h3,p{
+    padding:20px 20px 0px 20px; 
+}
+.section4{
+    display:flex; 
+    height:300px;
+    color:white;
+}
+.box{
+    width:50%;
+}
+.b1{
+    background-color: #515603;
+}
+.b2 {
+    background-color: #722300;
+}
+.section5{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:50px;
+    background-color:black;
+    color:white;
+} 
+h2{
+    margin:40px 30px 10px 40px;
+    font-size:60px;
+    font-weight:normal;
+}
+.box p{ 
+    line-height:30px;
+    padding:0px 30px 10px 40px;
+}
+.name{
+    font-size:20px; 
+}
+.section1 h1{
+    padding:70px; 
+} 
+    </style>
+</head>
+<body>
+    <div class="section1">
+        <h1>Hi,<span class="name">I am John Doe </span><br />FULL STACK DEVELOPER</h1>
+    </div>
+    <div class="section2">
+        <h1>WORK, I CAN DO FOR <span>YOU</span></h1>
+    </div>
+    <div class="section3">
+        <!--div class="innerdiv"-->
+            <div class="course c1">
+                <div class="image_div">
+                </div>
+                <div class="detail_div">
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quibusdam ex quaerat quasi nostrum tempore.</p>
+                </div>
+            </div>
+            <div class="course c2">
+                <div class="image_div">
+                </div>
+                <div class="detail_div">
+                    <h3>App Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quibusdam ex quaerat quasi nostrum tempore.</p>
+                </div>
+            </div>
+            <div class="course c3">
+                <div class="image_div">
+                </div>
+                <div class="detail_div">
+                    <h3>UI Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione quibusdam ex quaerat quasi nostrum tempore.</p>
+                </div>
+            </div>
+        <!--/div-->
+    </div>
+    <div class="section4">
+        <div class="box b1">
+            <h2>Contact Me</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi dolor, esse quasi doloremque temporibus quis.
+                dosomecoding@example.test
+            </p>
+        </div>
+        <div class="box b2">
+            <h2>About Me</h2>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi dolor, esse quasi doloremque temporibus quis.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi dolor, esse quasi doloremque temporibus quis.
+            </p>
+        </div>
+    </div>
+    <div class="section5">
+        PROJECT BY DO SOME CODING
+    </div>
+</body>
+</html>
