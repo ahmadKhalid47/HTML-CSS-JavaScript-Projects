@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dropbox.css">
+    <script src="https://kit.fontawesome.com/8ab48d9270.js" crossorigin="anonymous"></script>
+    <title>Dropbox Clone</title>
+    <link rel="icon" href="https://cfl.dropboxstatic.com/static/metaserver/static/images/favicon-vfl8lUR9B.ico">
+
+    <style>
+
+        *{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Segoe UI";
+}
+body{
+    width: 100%;
+    background-color:rgb(20, 40 , 10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+/* logo */
+
+#logo {
+    background-color: rgb(0, 86, 226);
+    width: 6.7vh;
+    height: 6.7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo_main {
+    position: relative;
+    top: 5%;
+    width: 65%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo_main_inner {
+    width: 100%;
+    height: 33%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#logo_main_inner2 {
+    transform: translateY(4%);
+}
+
+#logo_main_inner3 {
+    background-color: transparent;
+    transform: translateY(-30%);
+}
+
+.logo_box {
+    width: 24.4%;
+    height: 74%;
+    background-color:gold;
+    transform: scaleX(1.45) rotate(45deg);
+}
+
+
+
+/* font sizes */
+#nav_part2_div3 {
+    font-size: larger;
+    
+}
+#first_main_inner_div1 h1 {
+    font-size: 55px;
+    font-weight: 500;
+}
+#third_main span {
+    font-size: 55px;
+    font-weight: 700;
+    font-family: serif;
+}
+#sixth_inner_div3 h1 {
+    font-size: 50px;
+    font-weight: 400;
+}
+#first_main_inner_div2 h1,
+#second_main h1,
+#third_main_inner_div1 h1,
+#fifth_main h1,
+#before_fourth_main h1 {
+    font-size: 45px;
+    font-weight: 400;
+}
+#sixth_inner_div1 h1 {
+    font-size: 36px;
+    font-weight: 400;
+}
+#sixth_inner_div2 h1,
+#third_main h2 {
+    font-size: 30px;
+    font-weight: 400;
+}
+#nav_part1_div1 h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+#seventh_main_inner_div2 div:first-of-type i {
+    font-size: 26px;
+}
+#seventh_main_inner_div1 h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+#third_main_inner_div2 div h3:first-of-type {
+    font-size: 20px;
+    font-weight: normal;
+}
+#first_main_inner_div1 h3,
+#first_main_inner_div1 h2,
+#first_main_inner_div1 div input,
+#before_fourth_main h2 {
+    font-size: 19px;
+    font-weight: 400;
+}
+#list_div ol {
+    font-size: 18px;
+    font-weight: 500;
+}
+#second_main_inner_div h3{
+    font-size: 18px;
+    font-weight: 350;
+}
+#fifth_main h1 {
+    font-size: 45px;
+    font-weight: 400;
+}
+#fifth_main span {
+    font-size: 18px;
+    font-weight: 400;
+}
+#seventh_main_inner_div2 i {
+    font-size: 18px;
+    cursor: pointer;
+}
+#sixth_inner_div2 h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+#third_main h3 {
+    font-size: 17px;
+    font-weight: 400;
+}
+#third_main button,
+#sixth_main button {
+    font-size: 17px;
+    font-weight: 600;
+}
+#nav_part1_div2 p,
+#nav_part2_div1 p{
+    font-size: 17px;
+    font-weight: 400;
+    cursor: pointer;
+}
+#nav_part2_div2 button,
+#bar_options button {
+    font-size: 17px;
+    font-weight: 600;
+}
+#third_main_inner_div2 div h3:nth-of-type(2) {
+    font-size: 17px;
+    font-weight: normal;
+}
+#forth_inner_div1 h1,
+#forth_inner_div1 p{
+    font-size: 17px;
+}
+#sixth_inner_div1 h2 {
+    font-size: 16px;
+    font-weight: 400;
+}
+#sixth_inner_div2 h3,
+#seventh_main_inner_div1 li,
+#seventh_main_inner_div2 h2 {
+    font-size: 16px;
+    font-weight: 200;
+}
+#seventh_main_inner_div1 li,#seventh_main_inner_div2 h2 {
+    cursor: pointer;
+}
+#first_main_inner_div1 div button:hover{
+    background-color: rgba(150,150,150,0.1);
+}
+button:hover{
+    opacity: 0.9;
+}
+#navigation{
+    width: 100%;
+    height: 6.5vh;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: 1;
+    top: 0px;
+}
+#nav_part1{
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+#nav_part1_div1{
+    width: 22vh;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 5px;
+}
+#nav_part1_div1 h1{
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+#nav_part1_div2 {
+    width: 54.4vh;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav_part1_div1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+#nav_part2_div2 button{
+    width: 93%;
+    height: 90%;
+    background-color: rgb(0, 86, 226);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: none;
+}
+#nav_part2 {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+#nav_part2_div1 {
+    width: 52.8vh;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav_part2_div2 {
+    width: 24vh;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#nav_part2_div3 {
+    /* background-color: brown; */
+    width: 8vh;
+    height: 100%;
+    display: none;
+    align-items:center;
+}
+.global_show{
+    transform: translateY(100%);
+}
+#bar_options{
+    width: 100%;
+    height: calc(100vh - 6.5vh);
+    background-color: antiquewhite;
+    display:none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:6.5vh;
+    left: 0%;
+    list-style: none;
+}
+#list_div{
+    width: 85vw;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2vh;
+}
+#bar_options button{
+    width: 85%;
+    display: none;
+    justify-content: space-between;
+    background-color: rgb(0, 86, 226);
+    color: white;
+    padding: 5vh;
+    border: none;
+    margin-bottom: 10vh;
+}
+.global_show{
+    display: none;
+}
+#list_div ol{
+    line-height: 7vh;
+    list-style: none;
+}
+#list_div ol:first-child li{
+    width: 60vw;
+}
+#first_main{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(30, 25, 25, 1);
+    color: white;
+}
+#first_main_inner_div1{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3vh;
+    padding: 10vh 0vh;
+} 
+#first_main_inner_div1 h1 {
+    line-height: 100%;
+}
+#first_main_inner_div1 h1 +h3,
+#first_main_inner_div1 h1{
+    width: 60vw;
+}
+#first_main_inner_div1 button{
+    width: 30vh;
+    height: 10vh;
+    background-color: rgba(0, 87, 228, 1);
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: none;
+}
+#first_main_inner_div1 div {
+    height: 6vh;
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+#first_main_inner_div1 div input {
+    width: 53%;
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    outline: solid thin rgb(100,100,100);
+    border: none;
+    padding:0% 3%;
+}
+#first_main_inner_div1 div input:focus {
+    outline:solid thick rgba(0, 87, 228, 1);
+}
+#first_main_inner_div1 div button {
+    width: 40%;
+    height: 100%;
+    background-color: transparent;
+    color: white;
+    outline: solid thin white;
+}
+#first_main video{
+    width: 100vh
+}
+#first_main_inner_div2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:10vh;
+    padding: 10vh 0vh;  
+}
+#first_main_inner_div2 h1 {
+    width: 80vw;
+    text-align: center;
+    line-height: 100%;
+}
+#first_main_inner_div2 div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+}
+#first_main_inner_div2 div div {
+    width: 75vh;
+    display: flex;
+    justify-content: space-around;
+}
+#first_main_inner_div2 div div div{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 2vh;
+}
+#first_main_inner_div2 h3 {
+    font-weight: normal;
+}
+#first_main_inner_div2 img {
+    width: 20%;
+}
+#second_main,
+#fifth_main{
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(247, 245, 242);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 0vh;
+}
+#second_main_inner_div{
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+#second_main_inner_div div{
+    width: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 3vh;
+    padding: 10vh 1.5vh 0vh 1.5vh;
+}
+#second_main_inner_div img{
+    width: 15% ;
+}
+#to_set{
+    transform: scale(130%) translateY(15%);
+    padding-bottom: 5%;
+}
+#second_main h1{
+    width: 60vw;
+    text-align: center;
+    padding-bottom: 5vh;
+}
+#second_main_inner_div div h3:last-child span{
+    border-bottom: solid 1px; 
+}
+
+button:hover,
+#second_main_inner_div div h3:last-child:hover,
+#sixth_main_card_div h2:hover,
+button {
+    cursor: pointer;
+}
+
+button:hover  .fa-arrow-right,
+#second_main_inner_div div h3:last-child:hover .fa-arrow-right,
+#sixth_main_card_div h2:hover i{
+    transform: translate(30%);
+    transition: transform 0.3s;
+}
+#third_main{
+    padding: 10vh 0vh;
+    width: 100%;
+    background-color: rgba(30, 25, 25, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+#third_main_inner_div1{
+    width: 84vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+}
+#third_main button,#sixth_main button {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(78, 120, 255);
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 2.5vh 4vh;
+    border: none;
+}
+#third_main_card_part{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.third_main_card{
+    width: 49%;
+    background-color: rgb(43, 41, 41);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.third_main_card_image{
+    width: 100%;
+    height: 29vh;
+}
+.third_main_card_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+}
+.third_main_card_details {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 5vh;
+    padding: 5vh 0vh;
+}
+#third_main_inner_div2{
+    width: 75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10vh;
+    padding: 10vh 0vh 0vh 0vh;
+}
+#third_main_inner_div2 h1{
+    width: 70vw;
+    text-align: center;
+}
+#third_main_inner_div2 div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#third_main_inner_div2 div div {
+    width: 22%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8vh;
+    padding-bottom: 5vh;
+}
+#fifth_main h1 {
+    width: 50vw;
+    text-align: center;
+    line-height: 120%;
+    padding-bottom: 2vh;
+}
+#fifth_main span{
+    width: 80vw;
+    text-align: center;
+    text-decoration: underline;
+}
+#fifth_main span:hover {
+    text-decoration: none;
+}
+#sixth_main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(30, 25, 25);
+    color: white;
+    justify-content: center;
+}
+#sixth_inner_div1{
+    width: 80vh;
+    text-align: center;
+    padding: 10vh 0vh 5vh 0vh;
+}
+#sixth_inner_div1 h1{
+    width: 100%;
+    text-align: center;
+    padding:0vh 0vh 1.8vh 0vh;
+}
+#sixth_inner_div1 h2 {
+    text-decoration: underline;
+}
+#sixth_inner_div1 h2:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+#sixth_inner_div3 {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:12vh 0vh;
+}
+#sixth_inner_div3 h1{
+    text-align: center;
+}
+#sixth_inner_div2{
+    width: 100%;
+    background-color: rgb(36, 33, 33);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    padding: 10vh 0vh;
+}
+#sixth_inner_div2 h1{
+    line-height: 110%;
+}
+#sixth_inner_div2 h2 {
+    border-bottom: solid thin;
+}
+#sixth_inner_div2 h3 {
+    font-weight: 500;
+}
+#sixth_inner_div2 span {
+    color: rgba(247, 245, 242, 0.6);
+}
+#sixth_main_card_div{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5vh;
+}
+#sixth_main_card_div img{
+    width:calc(100vh - 25vw);
+}
+#sixth_main_card_div div {
+    width: calc(50vh + 25vw);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 3vh;
+}
+#seventh_main{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    gap: 9vh;
+    padding: 10vh 0vh 0vh 0vh;
+}
+#seventh_main_inner_div1{
+    justify-content: space-between;
+    width: 80vw;
+    display:flex;
+    flex-wrap: wrap;
+}
+#seventh_main_inner_div1 ol{
+    width: 25%;
+    width: fit-content;
+    height: fit-content;
+    list-style: none;
+}
+#seventh_main_inner_div1 h1 {
+    line-height: 9vh;
+}
+#seventh_main_inner_div1 li {
+    line-height: 4.5vh;
+    text-decoration: none;
+}
+#seventh_main_inner_div2{
+    width: 76vw;
+}
+#seventh_main_inner_div2 div:first-of-type{
+    width: fit-content;
+    display: flex;
+    gap: 3vh;
+    border-bottom: solid thin white;
+    padding-bottom: 5vh;
+}
+#seventh_main_inner_div2 div:last-of-type{
+    display: flex;
+    align-items: end;
+    gap: 2vh;
+    padding: 5vh 0vh 9vh 0vh;
+}
+#seventh_main_inner_div1 li:hover ,
+#seventh_main_inner_div2 h2:hover{
+    text-decoration: underline;
+}
+#forth_inner_div1 {
+    width: 50vw;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#forth_inner_div1 p b{
+    border-bottom: solid thin;
+}
+#forth_inner_div1 p b:hover {
+    border: none;
+    cursor: pointer;
+}
+#forth_inner_div1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+#details_main_div{
+    width: 90%;
+}
+.details_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: solid thin rgb(100, 100,100);
+    cursor: pointer;
+}
+.details_div:first-of-type {
+    border-top:solid thin rgb(100, 100, 100);
+}
+.details_div div:first-child{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5vh 0vh 3.9vh 0vh;
+}
+.details_div div:first-child h1{
+    width: 67%;
+    line-height: 110%;
+}
+.details_div div:nth-child(2) {
+    width: 83%;
+    display: none;
+    flex-direction: column;
+    gap: 3vh;
+    padding:0vh 12% 4.5vh 0vh;
+}
+.details_div:nth-child(1) div:nth-child(2) {
+    display: flex;
+} 
+.details_div:nth-child(1) i{
+    rotate: 180deg;
+}
+#forth_main::-webkit-scrollbar{
+    display: none;
+}
+#forth_inner_div2:-webkit-scrollbar{
+    display: none;
+}
+#before_fourth_main{
+    width: 80vw;
+    background-color: rgb(247, 245, 242);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2vh;
+    padding: 9vh 10vw;
+}
+#forth_main {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    overflow:hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#forth_inner_div2 {
+    width: 49vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+#forth_inner_div2 div{
+    height: 130vh;
+    justify-content: center;
+    align-items: center;
+}   
+#forth_main_image_div1{
+    width: 49vw;
+    display: flex;
+    position: absolute;
+    background-color:rgb(20, 200, 235);
+}
+#forth_main_image_div2 {   
+    width: 0px;
+    display: none;
+    position: absolute;
+    background-color: rgb(250, 85, 30);
+    transform: translate(100%);
+}
+#forth_inner_div2 div img {
+    width:41vw;
+}
+
+/* media query */
+@media (max-width:1200px) {
+    #nav_part2_div3 {
+        display: flex;
+    }
+    #nav_part1_div2,
+    #nav_part2_option1,
+    #nav_part2_option2 {
+        display: none;
+    }
+    .show3, #i_show1, #i_show2 {
+        display: flex;
+    }
+    #nav_part2_div1 {
+        justify-content: space-evenly;
+    }
+    #nav_part2_div1 {
+        gap: 10%;
+        width: 40vw;
+        justify-content: end;
+    }
+    #sixth_main_card_div {
+        flex-direction: column;
+    }
+}
+
+@media (max-width:1100px) {
+    #second_main_inner_div {
+        justify-content: space-evenly;
+    }
+    #second_main h1,#fifth_main h1 {
+        width: 80vw;
+    }
+    #sixth_inner_div3 {
+        flex-direction: column;
+        gap:5vh;
+    }
+}
+
+@media (max-width:1000px) {
+    /* n */
+    #forth_inner_div2 {
+        display: none;
+    }
+    #forth_inner_div1 {
+        width: 100%;
+    }
+    .details_div div:first-child h1 {
+        width: fit-content;
+    }
+    .details_div div:nth-child(2) {
+        width: 95%;
+        padding: 0vh 0vh 4.5vh 0vh;
+    }
+}
+
+@media (max-width:990px) {
+    #first_main_inner_div2 div div {
+        width: 100vh;
+        padding-bottom: 4vh;
+    }
+    #third_main_card_part {
+        gap: 5vh;
+    }
+    .third_main_card {
+        width: 100%;
+    }
+    .third_main_card_image {
+        height: 40%;
+    }
+    #sixth_inner_div3 h1 {
+        width: 90%;
+    }
+    #seventh_main_inner_div1 ol {
+        width: 33%;
+    }
+    #seventh_main_inner_div1 {
+        justify-content: start;
+    }
+}
+
+@media (max-width:800px) {
+    #first_main_inner_div1 h1+h3,
+    #first_main_inner_div1 h1,
+    #first_main_inner_div1 div input,
+    #first_main_inner_div1 div button,
+    #first_main_inner_div1 div {
+        width: 80vw;
+    }
+
+    #third_main_inner_div2 div div {
+        width: 70%;
+        padding-right: 20%;
+    }
+
+    #third_main_inner_div2 div {
+        justify-content: center;
+    }
+
+    #first_main video {
+        width: 80vw;
+    }
+}
+
+@media (max-width:770px) {
+    #nav_part2 {
+        justify-content: center;
+        gap: 0px;
+    }
+    #nav_part2_div2{
+        display: none;
+    }
+    #bar_options button {
+        display: flex;
+    }
+    #nav_part1_div1 {
+        width: fit-content;
+    }
+    #nav_part2_div1 {
+        gap: 10%;
+        width: 40vw;
+    }
+    #nav_part2_div3 {
+        justify-content: center;
+    }
+}
+
+@media (max-width:700px) {
+    #seventh_main_inner_div1 ol {
+        width: 50%;
+    }
+}
+
+@media (max-width:650px) {
+    #nav_part1_div1 h1, 
+    #nav_part2_option_i {
+        display: none;
+    }
+    .global_show{
+        display: flex;
+    }
+}
+
+@media (max-width:600px) {
+    #first_main_inner_div1 h1+h3,
+    #first_main_inner_div1 h1, 
+    #first_main_inner_div1 div input,
+    #first_main_inner_div1 div button,
+    #first_main_inner_div1 div{
+        width: 90vw;
+    }
+    #first_main video {
+        width: 90vw;
+    }
+    #sixth_main_card_div img{
+        width: 90vw;
+    }
+    #sixth_main_card_div div{
+        width: 90vw;
+    }
+    #seventh_main_inner_div1 {
+        width: 90vw;
+    }
+    #second_main_inner_div div {
+        width: 80%;
+        align-items: start;
+        padding: 10% 10% 0% 10%;
+    }
+    #sixth_inner_div1 {
+        width: 80vw;
+    }
+
+    #first_main_inner_div1,
+    #second_main,
+    #third_main,
+    #before_fourth_main
+    #fifth_main,
+    #sixth_inner_div1,
+    #seventh_main{
+        padding-top: 5vh;
+    }
+
+    #second_main_inner_div div{
+    padding-top: 5vh;
+    gap: 1.5vh;
+    }
+
+    #first_main_inner_div1 h1,
+    #sixth_inner_div3 h1,
+    #sixth_inner_div1 h1,
+    #third_main span,
+    #first_main_inner_div2 h1,
+    #second_main h1,
+    #third_main_inner_div1 h1,
+    #fifth_main h1 {
+        line-height: 100%;
+    }
+}
+
+@media (max-width:550px) {
+    #first_main_inner_div2 div div div{
+        width: 85%;
+        padding-bottom: 8vh;
+    }
+    #first_main_inner_div2 div div {
+        width: 100vw;
+        padding-bottom:0px;
+    }
+    #first_main_inner_div1 h1,
+    #third_main span {
+        font-size: 42px;
+    }
+    #sixth_inner_div3 h1 {
+        font-size: 38.5px;
+    }
+    #first_main_inner_div2 h1,
+    #second_main h1,
+    #third_main_inner_div1 h1,
+    #fifth_main h1 {
+        font-size: 35px;
+    }
+    #sixth_inner_div1 h1 {
+        font-size: 30px;
+    }
+}
+    </style>
+
+</head>
+<body>
+    <div id="navigation">
+        <div id="nav_part1">
+            <div id="nav_part1_div1">
+
+                <div id="logo">                
+                    <div id="logo_main">
+                        <div class="logo_main_inner" id="logo_main_inner1">
+                            <div class="logo_box"></div>
+                            <div class="logo_box"></div>
+                        </div>
+                        <div class="logo_main_inner" id="logo_main_inner2">
+                            <div class="logo_box"></div>
+                            <div class="logo_box"></div>
+                        </div>
+                        <div class="logo_main_inner" id="logo_main_inner3">
+                            <div class="logo_box"></div>
+                        </div>
+                    </div>                
+                </div>
+
+                <!-- <img src="https://cfl.dropboxstatic.com/static/metaserver/static/images/favicon-vfl8lUR9B.ico"> -->
+                <h1>Dropbox</h1>
+                
+            </div>
+            <div id="nav_part1_div2">
+                <p id="nav_part1_option1">Why Dropbox?</p>
+                <p id="nav_part1_option2">Products</p>
+                <p id="nav_part1_option3">Solutions</p>
+                <p id="nav_part1_option4">Pricing</p>
+            </div>
+        </div>
+        <div id="nav_part2">
+            <div id="nav_part2_div1">
+                <p id="nav_part2_option_i"><i class="fa-solid fa-globe"></i></p>
+                <p id="nav_part2_option1">Contact?</p>
+                <p id="nav_part2_option2">Get app</p>
+                <p id="nav_part2_option3">Sign up</p>
+                <p id="nav_part2_option4">Log in</p>
+            </div>
+            <div id="nav_part2_div2">
+                <button><p>Get started</p><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div id="nav_part2_div3">
+                <i id="bar_icon" class="fa-solid fa-bars"></i>
+                <div id="bar_options">
+
+                        <div id="list_div">
+                            <ol>
+                                <li class="show1">Why Dropbox?</li>
+                                <li class="show1">Products</li>
+                                <li class="show1">Solutions</li>
+                                <li class="show1">Pricing</li>
+                                <li class="show1">Contact?</li>
+                                <li class="show1">Get app</li>
+                            <li class="global_show"><i class="fa-solid fa-globe"></i></li>
+                        </ol>
+                        <ol>
+                            <li><i class="fa-solid fa-chevron-down"></i></li>
+                            <li><i class="fa-solid fa-chevron-down"></i></li>
+                            <li><i class="fa-solid fa-chevron-down"></i></li>
+                            <li><i class="fa-solid fa-chevron-down"></i></li>
+                            <li><i class="fa-solid fa-chevron-down"></i></li>
+                            <li><i class="fa-solid fa-chevron-down"></i></li>
+                        </ol>
+                        </div>
+                        <button><p>Get started</p><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="first_main">
+        <div id="first_main_inner_div1">
+            <h1>Join over 700 million registered users who trust Dropbox</h1>
+            <h3>Easy to use, reliable, private and secure. It’s no wonder Dropbox is the choice for storing and sharing your most important files.</h3>
+            <button>
+                <h2>Find Your Plan</h2>
+                <h2><i class="fa-solid fa-arrow-right"></i></h2>
+            </button>
+            <div>
+                <input type="text" placeholder="Enter your email address">
+                <button><h3>Sign up for free</h3></button>
+            </div>
+        </div>
+        <video play loop autoplay muted src="https://aem.dropbox.com/cms/content/dam/dropbox/warp/en-us/dropbox/Dropbox_Homepage.mp4"></video>
+        <div id="first_main_inner_div2">
+            <h1>See what sets Dropbox apart</h1>
+            <div>
+                <div>
+                    <div>
+                        <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/emoji%20smile.svg?id=42f38245-8ec6-4e1f-8519-c66d296b1cbf">
+                        <h3><b>All your files in one place</b></h3>
+                        <h3>Store computer backups, photo libraries, thousands of documents – all your files, in the same place.</h3>
+                    </div>
+                    <div>
+                        <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/cloud%20done.svg?id=f86f48e9-1a60-4f75-9075-79cd479ddb2b">               
+                        <h3><b>Your files, not ours</b></h3>
+                        <h3>With Dropbox, your files belong to you, not us, so you can be sure we’re not reselling your data.</h3>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/twinkle.svg?id=4d4d29e5-c87f-416b-a3ac-583eb86fc627">                    
+                        <h3><b>One-of-a-kind functionality</b></h3>
+                        <h3>Store files as large as 2 TB each, sync at light speed and allow anyone to preview nearly 200 file types.</h3>
+                    </div>
+                    <div>
+                        <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/shield.svg?id=bda0e9da-566d-4941-91a6-05b39f678c8d">
+                        <h3><b>Ease of use and security</b></h3>
+                        <h3>2/3 of surveyed users say that Dropbox keeps their files more secure and we’re a leader in ease of use.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="second_main">
+        <h1>A set of products to help you do more</h1>
+        <div id="second_main_inner_div">
+            <div>
+                <img id="to_set" src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/Dropbox.svg?id=fab7cfbe-2a98-437d-bf5a-4f1972dab31c">
+                <h3><b>Dropbox</b></h3>
+                <h3>Securely store, organise and share all your files.</h3>
+                <h3><span><b>Learn more</span> </b>&nbsp<i class="fa-solid fa-arrow-right"></i></h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/Sign.svg?id=108a6e2c-0a65-4828-b4a8-d9db1acbab30">
+                <h3><b>Sign</b></h3>
+                <h3>Streamline your document workflows with legally-binding eSignatures.</h3>
+                <h3><span><b>Learn more</span> </b>&nbsp<i class="fa-solid fa-arrow-right"></i></h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/Docsend.svg?id=bb81fa5c-7d2e-451b-a3cc-6f5a8ec31dea">
+                <h3><b>DocSend</b></h3>
+                <h3>Securely share your documents with real-time insights, so you know what's most impactful.</h3>
+                <h3><span><b>Learn more</span> </b>&nbsp<i class="fa-solid fa-arrow-right"></i></h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/Backup.svg?id=84564d6e-24a2-4509-8759-e6f3632fcddc">
+                <h3><b>Backup</b></h3>
+                <h3>Automatically back up important files on your devices to the cloud and easily restore them.</h3>
+                <h3><span><b>Learn more</span> </b>&nbsp<i class="fa-solid fa-arrow-right"></i></h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/Capture.svg?id=5feb571f-dfa5-43e1-aff5-c46725f9d60f">
+                <h3><b>Capture</b></h3>
+                <h3>Get your message across with screenshots, GIFs or videos recorded right on your screen.</h3>
+                <h3><span><b>Learn more</span> </b>&nbsp<i class="fa-solid fa-arrow-right"></i></h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/Transfer.svg?id=7e58da75-6dba-475b-b986-617d68eb2d01">
+                <h3><b>Transfer</b></h3>
+                <h3>Quickly and securely deliver large files – up to 100 GB – to anyone.</h3>
+                <h3><span><b>Learn more</span> </b>&nbsp<i class="fa-solid fa-arrow-right"></i></h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/Paper.svg?id=2550ae20-69c0-4aa0-ab51-20561cffe714">
+                <h3><b>Paper</b></h3>
+                <h3>Create collaborative documents to coordinate work and drive projects forward.</h3>
+                <h3><span><b>Learn more</span> </b>&nbsp<i class="fa-solid fa-arrow-right"></i></h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/Passwords.svg?id=77d004ac-0ed7-4d7c-b18a-6a00feca9eaa">
+                <h3><b>Passwords</b></h3>
+                <h3>Automatically store unlimited passwords in one central, secure place.</h3>
+                <h3><span><b>Learn more</span> </b>&nbsp<i class="fa-solid fa-arrow-right"></i></h3>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="third_main">
+        <div id="third_main_inner_div1">
+            <h1>How will you use Dropbox?</h1>
+            <div id="third_main_card_part">
+                <div class="third_main_card">
+                    <div class="third_main_card_image">
+                        <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/Segmentation_1@2x.png?id=18c73cb3-c675-494a-b763-bdf70c4eec9b&output_type=webp" >
+                    </div>
+                    <div class="third_main_card_details">
+                        <h2>For work</h2>
+                        <h3>Work efficiently with teammates and clients, stay in sync on projects and keep company data safe – all in one place.</h3>    
+                        <button>Get Dropbox For Work &nbsp&nbsp&nbsp&nbsp<i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div class="third_main_card">
+                    <div class="third_main_card_image">
+                        <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/Segmentation_2@2x.png?id=0fb2fab6-9abd-435d-b3be-05ff1613d992&output_type=webp">
+                    </div>
+                    <div class="third_main_card_details">
+                        <h2>For personal use</h2>
+                        <h3>Keep everything that’s important to you and your family shareable and safe in one place. Back up files in the cloud, share photos and videos and more.</h3>
+                        <button>Get Dropbox For personal use &nbsp&nbsp&nbsp&nbsp<i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="third_main_inner_div2">
+            <h1>Cloud storage you can count on</h1>
+            <div>
+                <div>
+                    <span>56%</span>
+                    <h3><b>of Fortune 500 companies</b></h3>
+                    <h3>have at least one Dropbox team plan</h3>
+                </div>
+                <div>
+                    <span>1B+</span>
+                    <h3><b>mobile app downloads</b></h3>
+                    <h3>with Editors’ Choice Awards from the Google Play and Apple App Store.</h3>
+                </div>
+                <div>
+                    <span>600K+</span>
+                    <h3><b>teams globaly</b></h3>
+                    <h3>use Dropbox to share work, safeguard content and grow their business.</h3>
+                </div>
+                <div>
+                    <span>4.5B</span>
+                    <h3><b>connections and counting</b></h3>
+                    <h3>created through Dropbox file sharing.</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="before_fourth_main">
+        <h1>What else can Dropbox help you do?</h1>
+        <h2>Dropbox brings everything – traditional files, cloud content and web shortcuts – together in one place.</h2>
+    </div>
+
+
+
+    <div id="forth_main">
+        <div id="forth_inner_div1">
+            <div id="details_main_div">
+                <div id="div1" class="details_div">
+                    <div>
+                        <h1>Get 2 GB of cloud storage for free with Dropbox Basic</h1>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="detail_to_show">
+                        <p>Save and access your files from any device, and share them with anyone. Discover what Dropbox can
+                            do for you – get a free account, no strings attached!</p>
+                        <p><b>Learn more</b></p>
+                    </div>
+                </div>
+    
+                <div id="div2" class="details_div">
+                    <div>
+                        <h1>Dropbox Plus has room for all your content with space to spare</h1>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="detail_to_show">
+                        <p>Safeguard your photos, personal docs, work files and much more. Save everything with 2,000 GB of
+                            space – and get some handy tools to help you stay organised.</p>
+                        <p><b>Learn more</b></p>
+                    </div>
+                </div>
+    
+                <div id="div3" class="details_div">
+                    <div>
+                        <h1>Dropbox Family is a place for everyone with space for everything</h1>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="detail_to_show">
+                        <p>Safeguard your photos, personal docs, work files and much more. Save everything with 2,000 GB of
+                            space – and get some handy tools to help you stay organised.</p>
+                        <p><b>Learn more</b></p>
+                    </div>
+                </div>
+    
+                <div id="div4" class="details_div">
+                    <div>
+                        <h1>Make life easier for you and your clients with Dropbox Professional</h1>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="detail_to_show">
+                        <p>Get our full suite of premium productivity and sharing tools – plus 3,000 GB of space. Dropbox
+                            Professional makes it easier for you to work with colleagues and clients.</p>
+                        <p><b>Learn more</b></p>
+                    </div>
+                </div>
+    
+                <div id="div5" class="details_div">
+                    <div>
+                        <h1>Streamline your document workflow with Dropbox Sign</h1>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="detail_to_show">
+                        <p>Save yourself time and hassle with Dropbox Sign. You can sign legally-binding agreements with a
+                            few clicks. And it's just as easy to request a signature from someone else.</p>
+                        <p><b>Learn more</b></p>
+                    </div>
+                </div>
+    
+                <div id="div6" class="details_div">
+                    <div>
+                        <h1>Centralise, secure and easily access your work with Dropbox Standard</h1>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="detail_to_show">
+                        <p>Safeguard sensitive and confidential info. Automate time-consuming processes with powerful admin
+                            and collaboration tools. And easily recover your work if something ever goes wrong. Minimum 3
+                            users per plan.</p>
+                        <p><b>Learn more</b></p>
+                    </div>
+                </div>
+    
+                <div id="div7" class="details_div">
+                    <div>
+                        <h1>DocSend lets you track, analyse and optimise your content</h1>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="detail_to_show">
+                        <p>Safely share business-critical documents and get real-time performance insights. DocSend helps
+                            you manage and optimise your company’s most important content.</p>
+                        <p><b>Learn more</b></p>
+                    </div>
+                </div>
+    
+                <div id="div8" class="details_div">
+                    <div>
+                        <h1>Proactively detect threats to your team’s content with Dropbox Advanced</h1>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="detail_to_show">
+                        <p>Always-on security monitoring and alerts. Extended 1-year version history and file recovery.
+                            Dropbox Advanced is a secure collaboration solution for your entire team. Minimum 3 users per
+                            plan.</p>
+                        <p><b>Learn more</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="forth_inner_div2">
+            <div id="forth_main_image_div1">
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/basic/basic_hero_ui_en_GB@2x.png?id=8a9978db-8b4e-4136-b20b-bfe317363ff2&output_type=webp">
+            </div>
+            <div id="forth_main_image_div2">
+                <img src="">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="fifth_main">
+        <h1>Get more out of Dropbox by connecting with the tools you love</h1>
+        <span>Find out more about partner integrations</span>
+        <div id="second_main_inner_div">
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/Integrations_1@2x.png?id=0b49280f-4fde-427d-95f2-f39f09170f06&output_type=webp">
+                <h3><b>Zoom</b></h3>
+                <h3>Enhance remote collaboration with Zoom instant meetings and video recordings.</h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/Integrations_2@2x.png?id=dc2c7070-361b-4c7a-8af6-4c9a1604e165&output_type=webp">
+                <h3><b>Slack</b></h3>
+                <h3>Bring Slack conversations and Dropbox content together to keep teams in sync.</h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/Integrations_3@2x.png?id=9fa9f7ca-08d5-488c-9d84-3aa7054859a9&output_type=webp">
+                <h3><b>Adobe Creative Cloud</b></h3>
+                <h3>Easily and securely send files to clients and vendors from within Adobe Photoshop.</h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/Integrations_4@2x.png?id=ce8269af-ef1a-460a-8199-65af3dd978a3&output_type=webp">
+                <h3><b>Microsoft Office</b></h3>
+                <h3>Easily access, edit and share Office docs online in Dropbox.</h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/Integrations_5@2x.png?id=51654bec-5969-4532-93d9-e7a265237d4a&output_type=webp">
+                <h3><b>Google Workspace</b></h3>
+                <h3>Create, edit and share Google Docs, Sheets and Slides in Dropbox.</h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/Integrations_6@2x.png?id=d19d3c69-b60c-4643-a44f-af372679c725&output_type=webp">
+                <h3><b>Trello</b></h3>
+                <h3>Collaborate on team projects in Trello with Dropbox content.</h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/Integrations_7@2x.png?id=bdfc4a9e-36b3-4ff9-a43f-30036c0acc89&output_type=webp">
+                <h3><b>Canvas</b></h3>
+                <h3>Upload course files or assignments straight from Dropbox to Canvas.</h3>
+            </div>
+            <div>
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/Integrations_8@2x.png?id=02655af8-df7a-43e2-b9ca-10def350e03e&output_type=webp">
+                <h3><b>Asana</b></h3>
+                <h3>Track all of your team’s work with Asana while keeping Dropbox content alongside.</h3>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="sixth_main">
+        <div id="sixth_inner_div1">
+            <h1>Trusted by over 700 million registered users and 600,000 teams</h1>
+            <h2>View more customer stories</h2>
+        </div>
+        <div id="sixth_inner_div2">
+            <div id="sixth_main_card_div">
+                <img src="https://fjord.dropboxstatic.com/warp/conversion/dropbox/dmep/assets/articles/DigitalNomads2_1440x960.jpg?id=1545245b-6903-4636-9586-7e18dcb1085d&width=1024&output_type=webp">
+                <div>
+                    <h1>“Dropbox has been tremendously helpful for social media. I can hop on anytime and pull whatever photo is inspiring me to post.”</h1>
+                    <h2>Read the full story &nbsp<i class="fa-solid fa-arrow-right"></i></h2>
+                    <h3>Mary Ashley Krogh (MAK), Illustrator and Graphic Designer</h3>
+                </div>
+            </div>
+            <!-- <div>
+                <span>01/07 </span>
+                <i class="fa-solid fa-angle-right"></i>
+            </div> -->
+            
+        </div>
+        <div id="sixth_inner_div3">
+            <h1>For all things worth sharing.</h1>
+            <button>Refer a friend &nbsp&nbsp&nbsp&nbsp<i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+
+
+
+    <div id="seventh_main">
+        <div id="seventh_main_inner_div1">
+            <ol>
+                <h1>Dropbox</h1>
+                <li>Desktop app</li> 
+                <li>Mobile app</li>  
+                <li>Integrations</li>      
+                <li>Features</li>      
+                <li>Solutions</li>      
+                <li>Do more than store</li>              
+                <li>Security</li>      
+                <li>Advanced access</li>      
+            </ol>
+            <ol>
+                <h1>Products</h1>
+                <li>Plus</li>
+                <li>Professional</li>
+                <li>Business</li>
+                <li>Enterprise</li>
+                <li>Dropbox Sign</li>
+                <li>DocSend</li>
+                <li>Plans</li>
+                <li>Product updates</li>
+            </ol>
+            <ol>
+                <h1>Support</h1>
+                <li>Help centre </li>
+                <li>Contact us</li>
+                <li>Privacy & terms </li>
+                <li>Cookie policy </li>
+                <li>Cookies & CCPA preferences</li>
+                <li>AI principles</li>
+                <li>Sitemap </li>
+                <li>Learning resources</li>
+            </ol>
+            <ol>
+                <h1>Community</h1>
+                <li>Blog</li>
+                <li>Developers</li>
+                <li>Community forums</li>
+                <li>Referrals</li>
+                <li>Reseller partners</li>
+                <li>Integration partners</li>
+            </ol>
+            <ol>
+                <h1>Company</h1>
+                <li>About us</li>
+                <li>Modern Slavery Statement</li>
+                <li>Jobs</li>
+                <li>Investor relations</li>
+                <li>ESG</li>
+                <li>Find a partner</li>
+            </ol>
+        </div>
+        <div id="seventh_main_inner_div2">
+            <div>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-youtube"></i>    
+            </div>
+            <div>
+                <i class="fa-solid fa-globe"></i>
+                <h2> English (United Kingdom) </h2>
+                <i class="fa-solid fa-angle-right"></i>                
+            </div>
+        </div>
+    </div>
+<script>
+
+let div = document.querySelectorAll(".details_div");
+let details = document.querySelectorAll(".detail_to_show");
+let icon = document.querySelectorAll(".details_div i");
+
+let image1 ="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/basic/basic_hero_ui_en_GB@2x.png?id=8a9978db-8b4e-4136-b20b-bfe317363ff2&output_type=webp";
+let image2 ="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/plus/plus_plank_02_ui_en_GB@2x.png?id=c166a95d-e82c-41a6-b7b0-caeb03cb9dc4&output_type=webp";
+let image3 ="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/family/family_plank_03_ui_en_GB@2x.png?id=6c191c61-a1f8-4610-ac51-9c9a42f52452&output_type=webp";
+let image4 ="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/pro/pro_plank_02_ui_en_GB@2x.png?id=d9604f91-74be-4a19-be7f-f0519f162a7b&output_type=webp";
+let image5 ="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/pro/pro_plank_01_ui_en_GB@2x.png?id=ef19cd93-7923-47b1-baab-6e3761e367e7&output_type=webp";
+let image6 ="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/business/CollabBrowse_2-en_GB@2x.png?id=309833d7-e032-49a0-9ba0-5f0c516be0ea&output_type=webp";
+let image7 ="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/collaboration-diagram.svg?id=6540056d-ca11-4954-a471-378bf78bbed5";
+let image8 ="https://fjord.dropboxstatic.com/warp/conversion/dropbox/warp/en-us/dropbox/JTBD_UI_7-en_GB@2x.png?id=613187ea-7fe8-4123-b4a3-01ab8c639986&output_type=webp";
+
+let color1 = "rgb(20, 200, 235)";
+let color2 = "rgb(250, 85, 30)";
+let color3 = "rgb(250, 210, 75)";
+let color4 = "rgb(255, 175, 165)";
+let color5 = "rgb(255, 140, 25)";
+let color6 = "rgb(180, 220, 25)";
+let color7 = "rgb(180, 200, 225)";
+let color8 = "rgb(200, 175, 240)";
+
+let images_array=[image1,image2,image3,image4,image5,image6,image7,image8]
+let colors_array = [color1,color2,color3,color4,color5,color6,color7,color8,];
+
+
+div.forEach(function (div) {
+            document.querySelector("#forth_main_image_div2").style.display = "flex";
+
+    let i = document.querySelector(`#${div.id} div i`);
+    let image_number = div.id.slice(3);
+    i.onclick = function () {
+
+        if (window.getComputedStyle(document.querySelector(`#${div.id} div i`)).rotate != "180deg") {
+
+
+            
+            document.querySelector("#forth_main_image_div2").style.opacity = 1;
+            document.querySelector("#forth_main_image_div2 img").src = images_array[image_number - 1];
+            document.querySelector("#forth_main_image_div2").style.backgroundColor = colors_array[image_number - 1];
+            document.querySelector("#forth_main_image_div2").style.transform = "translate(0%)";
+            document.querySelector("#forth_main_image_div2").style.width = "49vw";
+            document.querySelector("#forth_main_image_div2").style.transition = "transform 0.375s ease";
+        
+            setTimeout(function () {
+                document.querySelector("#forth_main_image_div1 img").src = images_array[image_number - 1];
+                document.querySelector("#forth_main_image_div1").style.backgroundColor = colors_array[image_number - 1];
+                document.querySelector("#forth_main_image_div2").style.opacity = 0;
+                document.querySelector("#forth_main_image_div2").style.transform = "translate(100%)";
+                document.querySelector("#forth_main_image_div2").style.width = "0vw";
+            }, 287)
+
+            details.forEach(function (details) {
+                details.style.display = "none";
+            });
+        
+        
+            icon.forEach(function (icon) {
+                icon.style.rotate = "0deg";
+            });
+        
+            document.querySelector(`#${div.id} .detail_to_show`).style.display = "flex";
+            document.querySelector(`#${div.id} div i`).style.rotate = "180deg";
+        }
+    }
+    
+});
+
+
+document.querySelector("#bar_icon").onclick = function () {
+  if (document.querySelector("#bar_icon").classList.contains("fa-bars")) {
+    document.querySelector("#bar_icon").classList.remove("fa-bars");
+    document.querySelector("#bar_icon").classList.add("fa-xmark");
+    document.querySelector("#bar_options").style.display = "flex";
+  } else {      
+    document.querySelector("#bar_icon").classList.remove("fa-xmark");
+    document.querySelector("#bar_icon").classList.add("fa-bars");
+    document.querySelector("#bar_options").style.display = "none";
+  }
+};
+
+</script>
+
+
+
+
+</body>
+</html>
